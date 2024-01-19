@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function add(){
+    const x = parseInt(document.getElementById("quantity1").value)
+    const y = parseInt(document.getElementById("quantity2").value)
+    document.getElementById("ans").innerHTML = x + y
+}
+</script>
+<body>
+    <label for="quantity"> Arithimetic </label> <br> <br>
+    <input type="number" id="quantity1" name="quantity" >
+    <label for="quantity"> + </label>
+    <input type="number" id="quantity2" name="quantity" >
+    <button type="button" onclick="add()"> = </button>
+    <p id="ans"></p>
+</body>
+</html>
