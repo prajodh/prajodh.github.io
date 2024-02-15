@@ -8,9 +8,10 @@
     async function add(){
     const x = parseInt(document.getElementById("quantity1").value)
     const y = parseInt(document.getElementById("quantity2").value)
-    const response = await fetch("https://arithimetic-service-ppsunder.onrender.com//add/"+x+"/"+y)
-    const sum = await reponse.json()
-    document.getElementById("ans").innerHTML = x + y
+    const response = await fetch("https://arithimetic-service-ppsunder.onrender.com/add/"+x+"/"+y)
+    const sum = await response.json()
+    // console.log(response)
+    document.getElementById("ans").innerHTML = sum
 }
 </script>
 <body>
