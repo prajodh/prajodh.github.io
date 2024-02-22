@@ -51,6 +51,14 @@
     const divide = await response.json()
     // console.log(response)
     document.getElementById("ans").innerHTML = divide}
+
+    async function isPrime() {
+            const numberToTest = document.getElementById("numberToTest");            
+            let n = numberToTest.value;            
+            const response = await fetch("???" + n);
+            const result = await response.json();
+            document.getElementById("primeCheckResult").innerText = result;
+        }
 </script>
 
 <body>
