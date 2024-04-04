@@ -20,8 +20,10 @@
         }
     </style>
 </head>
+<script src="configuration.js"></script>
 <script>
-
+    let hosts = configuration.hosts_local;
+    displayLogin();
     async function add() {
         const x = parseInt(document.getElementById("quantity1").value)
         const y = parseInt(document.getElementById("quantity2").value)
@@ -65,13 +67,16 @@
     async function cipherEncode() {
         const cipherText = document.getElementById("cipherText");
         let n = cipherText.value;
-        const cresponse = await fetch("https://ciphers-service-latest-nishanpoojary.onrender.com/ciphers/caesar/" + n + "/3");
+        const headers = {'Authorization':`Bearer ${configuration.token}`};
+        const cresponse = await fetch(`${hosts.primes_service}/primes/${n}`);
         const cresult = await cresponse.json();
         document.getElementById("cipherResult").innerText = cresult.cipher;
     }
 </script>
 
 <body>
+    <div class="row" id="login">
+    </div>
     <div class="row">
         <div class="column">
             <section>

@@ -1,5 +1,5 @@
 const hosts_local = {
-    arithmetic_servoce: "http://localhost:4000",
+    arithmetic_service: "http://localhost:4000",
     primes_service: "http://localhost:8085",
     ciphers_service: "http://localhost:4006",
     quotation_service: "http://localhost:4004"
