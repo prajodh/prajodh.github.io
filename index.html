@@ -20,7 +20,41 @@
         }
     </style>
 </head>
-<script src="configuration.js"></script>
+<body>
+    <div class="row" id="login">
+    </div>
+        <div class="column">
+            <section>
+                <label for="quantity"> Arithimetic Operations </label> <br> <br>
+                <input type="number" id="quantity1" name="quantity">
+                <input type="number" id="quantity2" name="quantity">
+                <button type="button" onclick="add()" id="add"> + </button>
+                <button type="button" onclick="sub()" id="sub"> - </button>
+                <button type="button" onclick="mul()" id="mul"> * </button>
+                <button type="button" onclick="div()" id="div"> / </button>
+                <label id="ans"></label>
+            </section>
+        </div>
+        <div class="column">
+            <section>
+                <h2>Prime check</h2>
+                <label>Number to test:</label>
+                <input id="numberToTest" />
+                <button onclick="isPrime()">Check</button>
+                <label id="primeCheckResult"></label>
+            </section>
+        </div>
+
+        <div class="column">
+            <section>
+                <h2>Caesar Cipher</h2>
+                <label>Text:</label>
+                <input id="cipherText" />
+                <button onclick="cipherEncode()">Cipher</button>
+                <label id="cipherResult"></label>
+            </section>
+        </div>
+        <script src="configuration.js"></script>
 <script>
     let hosts = configuration.hosts_local;
     displayLogin();
@@ -73,42 +107,6 @@
         document.getElementById("cipherResult").innerText = cresult.cipher;
     }
 </script>
-
-<body>
-    <div class="row" id="login">
-    </div>
-    <div class="row">
-        <div class="column">
-            <section>
-                <label for="quantity"> Arithimetic Operations </label> <br> <br>
-                <input type="number" id="quantity1" name="quantity">
-                <input type="number" id="quantity2" name="quantity">
-                <button type="button" onclick="add()" id="add"> + </button>
-                <button type="button" onclick="sub()" id="sub"> - </button>
-                <button type="button" onclick="mul()" id="mul"> * </button>
-                <button type="button" onclick="div()" id="div"> / </button>
-                <label id="ans"></label>
-            </section>
-        </div>
-        <div class="column">
-            <section>
-                <h2>Prime check</h2>
-                <label>Number to test:</label>
-                <input id="numberToTest" />
-                <button onclick="isPrime()">Check</button>
-                <label id="primeCheckResult"></label>
-            </section>
-        </div>
-
-        <div class="column">
-            <section>
-                <h2>Caesar Cipher</h2>
-                <label>Text:</label>
-                <input id="cipherText" />
-                <button onclick="cipherEncode()">Cipher</button>
-                <label id="cipherResult"></label>
-            </section>
-        </div>
 </body>
 
 </html>
